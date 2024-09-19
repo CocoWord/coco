@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://pquju4sviuxp"]
+
+[ext_resource type="Texture2D" uid="uid://veig2arx502" path="res://assets/character/Idle-Sheet.png" id="1_t7xqm"]
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, 0)
+texture = ExtResource("1_t7xqm")
+region_enabled = true
