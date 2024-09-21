@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://djvcnhlwg2wl6"]
+[gd_scene load_steps=7 format=4 uid="uid://djvcnhlwg2wl6"]
 
 [ext_resource type="Texture2D" uid="uid://cdpl4ff4jjeci" path="res://assets/levels/test_level/tiles.png" id="1_omem3"]
 [ext_resource type="Script" path="res://levels/test_level/scripts/main.gd" id="1_rf7hb"]
 [ext_resource type="Script" path="res://camera/camera.gd" id="3_sbonr"]
+[ext_resource type="PackedScene" uid="uid://pquju4sviuxp" path="res://characters/main_character/main_character.tscn" id="4_s3tej"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hjd27"]
 texture = ExtResource("1_omem3")
@@ -33,3 +34,6 @@ limit_top = 0
 limit_smoothed = true
 script = ExtResource("3_sbonr")
 tile_map = NodePath("../TileMapLayer")
+
+[node name="MainCharacter" parent="." instance=ExtResource("4_s3tej")]
+position = Vector2(271, 159)
