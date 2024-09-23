@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://pquju4sviuxp"]
+[gd_scene load_steps=35 format=3 uid="uid://pquju4sviuxp"]
 
 [ext_resource type="Script" path="res://characters/main_character/main_character.gd" id="1_gwqki"]
 [ext_resource type="Texture2D" uid="uid://iymse8ir6c55" path="res://assets/characters/main_character/animations/idle/idle-1.png" id="1_gxac8"]
@@ -69,9 +69,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("6_ntr0e")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
-"speed": 5.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 0.5,
@@ -102,6 +102,11 @@ animations = [{
 "frames": [],
 "loop": true,
 "name": &"new_animation",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation_1",
 "speed": 5.0
 }]
 
@@ -225,6 +230,39 @@ _data = {
 "go": SubResource("Animation_8l2je")
 }
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pdahd"]
+animation = &"Idle"
+use_custom_timeline = true
+timeline_length = 1.0
+stretch_time_scale = true
+start_offset = 0.0
+loop_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_uahtm"]
+animation = &"back"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nsnid"]
+animation = &"go"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8vcyn"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_btr7y"]
+advance_mode = 2
+advance_condition = &"is_back"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_ghuy1"]
+states/End/position = Vector2(648, 129)
+states/Idle/node = SubResource("AnimationNodeAnimation_pdahd")
+states/Idle/position = Vector2(430, 143)
+states/Start/position = Vector2(241, 129)
+states/back/node = SubResource("AnimationNodeAnimation_uahtm")
+states/back/position = Vector2(496, 242)
+states/go/node = SubResource("AnimationNodeAnimation_nsnid")
+states/go/position = Vector2(364, 232)
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_8vcyn"), "Idle", "back", SubResource("AnimationNodeStateMachineTransition_btr7y")]
+graph_offset = Vector2(-188, 60)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kl2qe"]
 size = Vector2(72, 89)
 
@@ -243,6 +281,12 @@ root_node = NodePath("../..")
 libraries = {
 "": SubResource("AnimationLibrary_7koxn")
 }
+
+[node name="AnimationTree" type="AnimationTree" parent="AnimController"]
+root_node = NodePath("../..")
+tree_root = SubResource("AnimationNodeStateMachine_ghuy1")
+anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/is_back = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, 53.5)

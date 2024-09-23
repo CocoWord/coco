@@ -6,6 +6,7 @@ var moving_mode = false
 var direction = 0
 @onready var target_position = position
 @onready var animation_player: AnimationPlayer = $AnimController/AnimationPlayer
+@onready var animation_tree: AnimationTree = $AnimController/AnimationTree
 
 
 
@@ -22,5 +23,7 @@ func _physics_process(delta: float) -> void:
 			direction = (target_position.x - position.x) / abs(target_position.x - position.x)
 		else:  direction = 0
 		position.x += direction * speed * delta     #移动到鼠标位置
+	if (target_position.x - position.x) < 0:
+		animation_tree.set("parameters/conditions/is_back" , true)
 	velocity.y += gravity * delta
 	move_and_slide() #重力
