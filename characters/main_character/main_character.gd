@@ -19,11 +19,19 @@ func _physics_process(delta: float) -> void:
 		moving_mode = false
 		target_position.x = get_global_mouse_position().x     #鼠标按下设定目标地点的x轴位置
 	if position.distance_to(target_position) > 2:
-		if abs(target_position.x - position.x) > 0:
-			direction = (target_position.x - position.x) / abs(target_position.x - position.x)
-		else:  direction = 0
+		animation_tree.set("parameters/conditions/is_idle" , false)
+		if (target_position.x - position.x) > 0:
+			direction = 1
+			animation_tree.set("parameters/conditions/is_back" , true)
+		elif (target_position.x - position.x) < 0:
+			direction = -1
+			animation_tree.set("parameters/conditions/is_go" , true)
+		else:  
+			direction = 0
 		position.x += direction * speed * delta     #移动到鼠标位置
-	if (target_position.x - position.x) < 0:
-		animation_tree.set("parameters/conditions/is_back" , true)
+	else:
+		animation_tree.set("parameters/conditions/is_idle" , true)
+		animation_tree.set("parameters/conditions/is_back" , false)
+		animation_tree.set("parameters/conditions/is_go" , false)
 	velocity.y += gravity * delta
 	move_and_slide() #重力

@@ -1,26 +1,27 @@
-[gd_scene load_steps=35 format=3 uid="uid://pquju4sviuxp"]
+[gd_scene load_steps=39 format=3 uid="uid://pquju4sviuxp"]
 
 [ext_resource type="Script" path="res://characters/main_character/main_character.gd" id="1_gwqki"]
-[ext_resource type="Texture2D" uid="uid://iymse8ir6c55" path="res://assets/characters/main_character/animations/idle/idle-1.png" id="1_gxac8"]
 [ext_resource type="Texture2D" uid="uid://8krcfic6ytbs" path="res://assets/characters/main_character/animations/back/back_0000_图层-7.png" id="1_wi5or"]
 [ext_resource type="Texture2D" uid="uid://p1vnt515185o" path="res://assets/characters/main_character/animations/back/back_0001_图层-6.png" id="2_3tilg"]
-[ext_resource type="Texture2D" uid="uid://co75ninw6xvjk" path="res://assets/characters/main_character/animations/idle/idle-2.png" id="2_vroun"]
-[ext_resource type="Texture2D" uid="uid://2k8qw03ry50y" path="res://assets/characters/main_character/animations/idle/idle-3.png" id="3_g4o3x"]
 [ext_resource type="Texture2D" uid="uid://cblw7r8322bv" path="res://assets/characters/main_character/animations/back/back_0002_图层-5.png" id="3_u2vrx"]
-[ext_resource type="Texture2D" uid="uid://bmlqn36dm1vt5" path="res://assets/characters/main_character/animations/idle/idle-4.png" id="4_5khsc"]
 [ext_resource type="Texture2D" uid="uid://bjoevvevw220a" path="res://assets/characters/main_character/animations/back/back_0003_图层-4.png" id="4_yviko"]
 [ext_resource type="Texture2D" uid="uid://c3hrtymov7duk" path="res://assets/characters/main_character/animations/back/back_0004_图层-3.png" id="5_jknw7"]
-[ext_resource type="Texture2D" uid="uid://u7mscvsi8nuo" path="res://assets/characters/main_character/animations/idle/idle-5.png" id="5_m0jpn"]
 [ext_resource type="Texture2D" uid="uid://cf7wndtdih54w" path="res://assets/characters/main_character/animations/back/back_0005_图层-2.png" id="6_bgi7r"]
-[ext_resource type="Texture2D" uid="uid://btcyw5yojn374" path="res://assets/characters/main_character/animations/idle/idle-6.png" id="6_ntr0e"]
 [ext_resource type="Texture2D" uid="uid://bssigg1h3pc07" path="res://assets/characters/main_character/animations/go/go_0006_图层-1.png" id="7_4ype1"]
 [ext_resource type="Texture2D" uid="uid://b5k4oibfbfrcy" path="res://assets/characters/main_character/animations/back/back_0006_图层-1.png" id="7_x300e"]
 [ext_resource type="Texture2D" uid="uid://de1b712e8mhgr" path="res://assets/characters/main_character/animations/go/go_0005_图层-2.png" id="8_cvjpe"]
+[ext_resource type="Texture2D" uid="uid://bpbbvkccb7vhq" path="res://assets/characters/main_character/animations/idle/idle_0000_图层-7.png" id="9_6wmy5"]
 [ext_resource type="Texture2D" uid="uid://cibmckfp10juk" path="res://assets/characters/main_character/animations/go/go_0004_图层-3.png" id="9_r6i1m"]
+[ext_resource type="Texture2D" uid="uid://bm6o353abm6xb" path="res://assets/characters/main_character/animations/idle/idle_0001_图层-6.png" id="10_bs3rm"]
 [ext_resource type="Texture2D" uid="uid://bjrvaq3d3ifdg" path="res://assets/characters/main_character/animations/go/go_0003_图层-4.png" id="10_j3uvo"]
+[ext_resource type="Texture2D" uid="uid://crp854u3wsknk" path="res://assets/characters/main_character/animations/idle/idle_0002_图层-5.png" id="11_486a4"]
 [ext_resource type="Texture2D" uid="uid://dxv6bly22q78f" path="res://assets/characters/main_character/animations/go/go_0002_图层-5.png" id="11_gdcs1"]
+[ext_resource type="Texture2D" uid="uid://dtnodh83bfc1o" path="res://assets/characters/main_character/animations/idle/idle_0003_图层-4.png" id="12_5f2qs"]
 [ext_resource type="Texture2D" uid="uid://b6nx7v3axxtoa" path="res://assets/characters/main_character/animations/go/go_0001_图层-6.png" id="12_yj5y2"]
 [ext_resource type="Texture2D" uid="uid://cht5vaof2ajlk" path="res://assets/characters/main_character/animations/go/go_0000_图层-7.png" id="13_8k1wl"]
+[ext_resource type="Texture2D" uid="uid://nkwwp2gbnwto" path="res://assets/characters/main_character/animations/idle/idle_0004_图层-3.png" id="13_dti5q"]
+[ext_resource type="Texture2D" uid="uid://b8ygbs411tl23" path="res://assets/characters/main_character/animations/idle/idle_0005_图层-2.png" id="14_43p4s"]
+[ext_resource type="Texture2D" uid="uid://bn6xib67014al" path="res://assets/characters/main_character/animations/idle/idle_0006_图层-1.png" id="15_mtelh"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rhx1o"]
 animations = [{
@@ -52,22 +53,25 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_gxac8")
+"texture": ExtResource("9_6wmy5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_vroun")
+"texture": ExtResource("10_bs3rm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_g4o3x")
+"texture": ExtResource("11_486a4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_5khsc")
+"texture": ExtResource("12_5f2qs")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_m0jpn")
+"texture": ExtResource("13_dti5q")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_ntr0e")
+"texture": ExtResource("14_43p4s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_mtelh")
 }],
 "loop": false,
 "name": &"default",
@@ -112,31 +116,31 @@ animations = [{
 
 [sub_resource type="Animation" id="Animation_o2fto"]
 resource_name = "Idle"
-length = 0.23
+length = 0.25
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Root/AnimatedSprite2D:frame")
+tracks/0/path = NodePath("Root/AnimatedSprite2D:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1, 0.133333, 0.166667),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0, 1, 2, 3, 4, 5]
+"values": [&"default"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Root/AnimatedSprite2D:animation")
+tracks/1/path = NodePath("Root/AnimatedSprite2D:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.0333333),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1, 0.133333, 0.166667, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [&"default"]
+"values": [0, 1, 2, 3, 4, 5, 6]
 }
 
 [sub_resource type="Animation" id="Animation_0dx27"]
@@ -196,30 +200,30 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_8l2je"]
 resource_name = "go"
-length = 0.23
+length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Root/AnimatedSprite2D:frame")
+tracks/0/path = NodePath("Root/AnimatedSprite2D:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1, 0.133333, 0.166667, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6]
+"values": [&"go"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Root/AnimatedSprite2D:animation")
+tracks/1/path = NodePath("Root/AnimatedSprite2D:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.433333),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1, 0.133333, 0.166667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [&"go"]
+"values": [0, 1, 2, 3, 4, 5]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7koxn"]
@@ -251,6 +255,18 @@ advance_mode = 2
 advance_mode = 2
 advance_condition = &"is_back"
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_07rqo"]
+advance_mode = 2
+advance_condition = &"is_idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vnpv2"]
+advance_mode = 2
+advance_condition = &"is_go"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_m71hc"]
+advance_mode = 2
+advance_condition = &"is_idle"
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_ghuy1"]
 states/End/position = Vector2(648, 129)
 states/Idle/node = SubResource("AnimationNodeAnimation_pdahd")
@@ -260,7 +276,7 @@ states/back/node = SubResource("AnimationNodeAnimation_uahtm")
 states/back/position = Vector2(496, 242)
 states/go/node = SubResource("AnimationNodeAnimation_nsnid")
 states/go/position = Vector2(364, 232)
-transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_8vcyn"), "Idle", "back", SubResource("AnimationNodeStateMachineTransition_btr7y")]
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_8vcyn"), "Idle", "back", SubResource("AnimationNodeStateMachineTransition_btr7y"), "back", "Idle", SubResource("AnimationNodeStateMachineTransition_07rqo"), "Idle", "go", SubResource("AnimationNodeStateMachineTransition_vnpv2"), "go", "Idle", SubResource("AnimationNodeStateMachineTransition_m71hc")]
 graph_offset = Vector2(-188, 60)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kl2qe"]
@@ -272,6 +288,7 @@ script = ExtResource("1_gwqki")
 [node name="Root" type="Node2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Root"]
+position = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_rhx1o")
 
 [node name="AnimController" type="Node" parent="."]
@@ -287,7 +304,9 @@ root_node = NodePath("../..")
 tree_root = SubResource("AnimationNodeStateMachine_ghuy1")
 anim_player = NodePath("../AnimationPlayer")
 parameters/conditions/is_back = false
+parameters/conditions/is_go = false
+parameters/conditions/is_idle = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3, 53.5)
+position = Vector2(-6, -1)
 shape = SubResource("RectangleShape2D_kl2qe")
