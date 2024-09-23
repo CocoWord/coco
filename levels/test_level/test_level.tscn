@@ -36,4 +36,4 @@ script = ExtResource("3_sbonr")
 tile_map = NodePath("../TileMapLayer")
 
 [node name="MainCharacter" parent="." instance=ExtResource("4_s3tej")]
-position = Vector2(271, 159)
+position = Vector2(123, 112)
